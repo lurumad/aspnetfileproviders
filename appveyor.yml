@@ -16,13 +16,13 @@ deploy:
 - provider: NuGet
   server: https://www.myget.org/F/aspnetfileproviders/api/v2/package
   api_key:
-    secure: 
+    secure: Msv9TA4MzbLFcLjBM7aWGpU5miHtVlwYa2MOD/CPj1iXRPx+xN3tBjf88Eq6H8GZ
   skip_symbols: true
   on:
     branch: master
 - provider: NuGet
   name: production
   api_key:
-    secure: 
+    secure: spc3r8J8ovBmY9ADxNrTSdUDQVJHBSew5u1YvQCwxyeHmvKfVOxdMlLkvAuo6HGD
   on:
     appveyor_repo_tag: true
