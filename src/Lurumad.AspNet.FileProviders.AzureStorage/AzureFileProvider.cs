@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Primitives;
 using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Auth;
 using Microsoft.WindowsAzure.Storage.Blob;
 using System;
 using System.IO;
@@ -15,9 +16,21 @@ namespace Lurumad.AspNet.FileProviders.AzureStorage
         {
             var setup = new AzureOptions();
             options(setup);
-            var account = CloudStorageAccount.Parse(setup.ConnectionString);
-            var client = account.CreateCloudBlobClient();
-            container = client.GetContainerReference(setup.ContainerName);
+            CloudBlobClient cloudBlobClient;
+            if (!String.IsNullOrWhiteSpace(setup.ConnectionString) && CloudStorageAccount.TryParse(setup.ConnectionString, out CloudStorageAccount cloudStorageAccount))
+            {
+                cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
+            }
+            else if (setup.Uri != null && !String.IsNullOrWhiteSpace(setup.SasToken))
+            {
+                cloudBlobClient = new CloudBlobClient(setup.Uri, new StorageCredentials(setup.SasToken));
+            }
+            else
+            {
+                throw new ArgumentException($"Please provide {nameof(setup.ConnectionString)} or {nameof(setup.Uri)} + {nameof(setup.SasToken)}");
+            }
+
+            container = cloudBlobClient.GetContainerReference(setup.Container);
         }
 
         public IDirectoryContents GetDirectoryContents(string subpath)

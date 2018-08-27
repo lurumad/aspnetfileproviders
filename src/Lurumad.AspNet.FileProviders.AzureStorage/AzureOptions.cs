@@ -1,9 +1,12 @@
-﻿namespace Lurumad.AspNet.FileProviders.AzureStorage
+﻿using System;
+
+namespace Lurumad.AspNet.FileProviders.AzureStorage
 {
     public class AzureOptions
     {
         public string ConnectionString { get; set; }
-        public string ContainerName { get; set; }
-        public string TableName { get; set; }
+        public Uri Uri { get; set; }
+        public string SasToken { get; set; }
+        public string Container { get; set; }
     }
 }

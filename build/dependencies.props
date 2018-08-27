@@ -14,7 +14,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="FileProviders Package Versions">
-    <LurumadAspNetFileProvidersAzureStoragePackageVersion>1.0.0</LurumadAspNetFileProvidersAzureStoragePackageVersion>
+    <LurumadAspNetFileProvidersAzureStoragePackageVersion>1.1.0</LurumadAspNetFileProvidersAzureStoragePackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Package information">
