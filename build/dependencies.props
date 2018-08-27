@@ -1,0 +1,27 @@
+<Project>
+  <PropertyGroup Label="SDK Versions">
+    <NetStandardTargetVersion>netstandard2.0</NetStandardTargetVersion>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package Versions">
+    <MicrosoftExtensionsFileProvidersAbstractionsPackageVersion>2.1.1</MicrosoftExtensionsFileProvidersAbstractionsPackageVersion>
+    <MicrosoftExtensionsPrimitivesPackageVersion>2.1.1</MicrosoftExtensionsPrimitivesPackageVersion>
+    <WindowsAzureStoragePackageVersion>9.3.1</WindowsAzureStoragePackageVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="CLI Tools Versions">
+  </PropertyGroup>
+
+  <PropertyGroup Label="FileProviders Package Versions">
+    <LurumadAspNetFileProvidersAzureStoragePackageVersion>1.0.0</LurumadAspNetFileProvidersAzureStoragePackageVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package information">
+    <PackageLicenseUrl>https://github.com/lurumad/aspnetfileproviders/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>http://github.com/lurumad/aspnetfileproviders</PackageProjectUrl>
+    <RepositoryUrl>http://github.com/lurumad/aspnetfileproviders</RepositoryUrl>
+    <Authors>Lurumad</Authors>
+    <Company>Lurumad</Company>
+  </PropertyGroup>
+</Project>

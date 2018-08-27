@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
+    <PackageLicenseUrl>$(PackageLicenseUrl)</PackageLicenseUrl>
+    <PackageProjectUrl>$(PackageProjectUrl)</PackageProjectUrl>
+    <Description>ASP.NET Core FileProviders.For more information see http://github.com/lurumad/aspnetfileproviders </Description>
+    <PackageTags>AspNEtCore;FileProviders</PackageTags>
+    <Version>$(LurumadAspNetFileProvidersAzureStoragePackageVersion)</Version>
+    <RepositoryUrl>$(RepositoryUrl)</RepositoryUrl>
+    <Company>$(Company)</Company>
+    <Authors>$(Authors)</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="$(MicrosoftExtensionsFileProvidersAbstractionsPackageVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="$(MicrosoftExtensionsPrimitivesPackageVersion)" />
+    <PackageReference Include="WindowsAzure.Storage" Version="$(WindowsAzureStoragePackageVersion)" />
+  </ItemGroup>
+
+</Project>
