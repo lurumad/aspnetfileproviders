@@ -4,11 +4,11 @@ using System;
 
 namespace Lurumad.AspNet.FileProviders.AzureStorage
 {
-    public class AzureChangeToken : IChangeToken
+    public class AzureBlobStorageChangeToken : IChangeToken
     {
         private readonly IListBlobItem result;
 
-        public AzureChangeToken(IListBlobItem result)
+        public AzureBlobStorageChangeToken(IListBlobItem result)
         {
             this.result = result ?? throw new ArgumentNullException(nameof(result));
         }

@@ -5,11 +5,11 @@ using System.IO;
 
 namespace Lurumad.AspNet.FileProviders.AzureStorage
 {
-    public class AzureFileInfo : IFileInfo
+    public class AzureBlobStorageFileInfo : IFileInfo
     {
         private readonly CloudBlockBlob cloudBlobBlock;
 
-        public AzureFileInfo(IListBlobItem result)
+        public AzureBlobStorageFileInfo(IListBlobItem result)
         {
             if (result is CloudBlockBlob cloudBlobBlock)
             {

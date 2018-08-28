@@ -4,8 +4,8 @@
     <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
     <PackageLicenseUrl>$(PackageLicenseUrl)</PackageLicenseUrl>
     <PackageProjectUrl>$(PackageProjectUrl)</PackageProjectUrl>
-    <Description>ASP.NET Core FileProviders.For more information see http://github.com/lurumad/aspnetfileproviders </Description>
-    <PackageTags>AspNEtCore;FileProviders</PackageTags>
+    <Description>ASP.NET Core FileProvider for Azure Blob Storage. For more information see http://github.com/lurumad/aspnetfileproviders </Description>
+    <PackageTags>AspNetCore;FileProviders;Azure;Blobs;Storage</PackageTags>
     <Version>$(LurumadAspNetFileProvidersAzureStoragePackageVersion)</Version>
     <RepositoryUrl>$(RepositoryUrl)</RepositoryUrl>
     <Company>$(Company)</Company>

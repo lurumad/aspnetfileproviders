@@ -1,12 +1,15 @@
 <Project>
   <PropertyGroup Label="SDK Versions">
+    <NetCoreTargetVersion>netcoreapp2.1</NetCoreTargetVersion>
     <NetStandardTargetVersion>netstandard2.0</NetStandardTargetVersion>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Package Versions">
+    <FluentValidationAspNetCorePackageVersion>8.0.0</FluentValidationAspNetCorePackageVersion>
     <MicrosoftExtensionsFileProvidersAbstractionsPackageVersion>2.1.1</MicrosoftExtensionsFileProvidersAbstractionsPackageVersion>
     <MicrosoftExtensionsPrimitivesPackageVersion>2.1.1</MicrosoftExtensionsPrimitivesPackageVersion>
+    <SwashbuckleAspNetCorePackageVersion>3.0.0</SwashbuckleAspNetCorePackageVersion>
     <WindowsAzureStoragePackageVersion>9.3.1</WindowsAzureStoragePackageVersion>
   </PropertyGroup>
 
@@ -14,7 +17,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="FileProviders Package Versions">
-    <LurumadAspNetFileProvidersAzureStoragePackageVersion>1.1.0</LurumadAspNetFileProvidersAzureStoragePackageVersion>
+    <LurumadAspNetFileProvidersAzureStoragePackageVersion>2.0.0</LurumadAspNetFileProvidersAzureStoragePackageVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Package information">

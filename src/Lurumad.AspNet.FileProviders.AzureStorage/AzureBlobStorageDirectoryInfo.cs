@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace Lurumad.AspNet.FileProviders.AzureStorage
 {
-    internal class AzureDirectoryInfo : IDirectoryContents
+    internal class AzureBlobStorageDirectoryInfo : IDirectoryContents
     {
         private readonly CloudBlobDirectory directory;
 
-        public AzureDirectoryInfo(CloudBlobDirectory directory)
+        public AzureBlobStorageDirectoryInfo(CloudBlobDirectory directory)
         {
             this.directory = directory;
             var blogResultSegment = directory.ListBlobsSegmentedAsync(null).Result;
@@ -39,7 +39,7 @@ namespace Lurumad.AspNet.FileProviders.AzureStorage
                 continuationToken = response.ContinuationToken;
                 foreach (var result in response.Results)
                 {
-                    yield return new AzureFileInfo(result);
+                    yield return new AzureBlobStorageFileInfo(result);
                 }
             } while (continuationToken != null);
         }
