@@ -6,7 +6,21 @@
 
 A collection of File Providers for ASP.NET Core:
 
-- Azure Blob Storage File Provider for ASP.NET Core.
+- **Azure Blob Storage File Provider** for ASP.NET Core.
+
+  This file provider allows our ASP.NET Core application to use Azure blobs as if they would actually be files stored in server disk.
+
+  As an example, we could use this provider to make our ASP.NET application serve blobs as static files, based in a relative request path.
+
+  If we would have following blobs inside an Azure Blob Container:
+
+  - Blob1.txt
+
+  - Blob2.txt
+
+  and we'd configure the provider with "/site" relative path, we could ask for the blobs using following url's:
+
+      https://server/site/Blob1.txt and https://server/site/Blob2.txt
 
 ## Getting Started with Azure Storage File Provider
 
